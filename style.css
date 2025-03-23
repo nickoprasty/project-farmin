@@ -3,6 +3,7 @@
     margin:0px;
     padding:0px;
     font-family: 'ubuntu', sans-serif;
+    box-sizing: border-box;
 }
 body{
     background-color: #f9f7f4;
@@ -73,6 +74,23 @@ h3{
     align-items: center; 
     height: 100vh;
     margin: 0;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:hover, input:focus, select:hover, select:focus {
+    border-color: #4CAF50;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 8px rgba(76, 175, 80, 0.4);
+    outline: none;
 }
 
 #username1 , #password1{
