@@ -39,15 +39,16 @@ if (isset($_POST['btnUpdateItem'])) {
 </head>
 <body class="bodyTambahItem">
     <form action="" method="POST" class="formTambahItem">
-        <a href="dashboard.php" id="btnKembali">Kembali</a>
-        <h3>UPDATE ITEM</h3>
-        
+        <div style="margin-bottom: 15px;">
+            <a href="dashboard.php" id="btnKembali" style="text-decoration: none; color: black; position: absolute; top: 10px; left: 10px; font-weight: 500; font-size: 13px;">Kembali</a>
+            <h3>UPDATE ITEM</h3>
+        </div>    
         <div class="tambahNama">
             <label for="namaItem">Nama Item:</label>
             <input type="text" name="namaItem" value="<?= $data['nama_item']; ?>" required>
         </div>
 
-        <div class="tambahJenis">
+        <div class="tambahJenis" style="width: 90%; padding-left: 5px;">
             <label for="jenisItem">Jenis Item:</label>
             <select name="jenisItem" required>
                 <option value="sayur" <?= $data['jenis_item'] == 'sayur' ? 'selected' : ''; ?>>Sayur</option>
@@ -61,7 +62,7 @@ if (isset($_POST['btnUpdateItem'])) {
         </div>
 
         <i><?= $message ?></i>
-        <button type="submit" id="btnTambahItem" name="btnUpdateItem">UPDATE</button>
+        <button type="submit" id="btnTambahItem" name="btnUpdateItem" style="border: none; background-color:#52b16a; color:white; width: 200px; height: 20px; border-radius: 20px; margin-top: 20px;">UPDATE</button>
     </form>
 </body>
 </html>

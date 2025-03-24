@@ -163,11 +163,11 @@ input:hover, input:focus, select:hover, select:focus {
     z-index: 0;
 }
 .homescreen3{
-    width: 300px;
+    width: 320px;
     padding: 10px;
     text-align: justify;
     margin: 30px;
-    height: 150px;
+    height: 170px;
     position:relative;
     top: -30px;
     background-color: #A8E6A3;
