@@ -135,53 +135,62 @@ input:hover, input:focus, select:hover, select:focus {
     font-weight: 500;
 }
 
-.homescreen2{
-    background-color: #39b777;
-    width: 320px;
-    height: 50px;
-    position: relative;
-    top: -50px;
-    margin: 30px;
-    text-align: center;
-    color: white;
-    border-top-left-radius:5px ;
-    border-top-right-radius: 5px;
-    
-}
 .homescreen{
-    display: grid;
-    grid-template-columns: 400px 400px 400px; 
-    grid-template-rows: 30px 30px 30px;
-    grid-template-areas: 
-    "judul1 judul2 judul3"
-    "gambar1 gambar2 gambar3";
+    display: flex;
     justify-content: center; 
     background-color: #f9f7f4; 
-    height: 500px; 
+    height: 350px; 
     position: relative; 
     top: 450px; 
     z-index: 0;
+    flex-wrap: wrap;
 }
+.homescreens2{
+    background-color: white;
+    position:relative;
+    top: 450px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kontenhs2{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kontenhs3{
+    margin: 20px;
+    margin-top: 50px;
+    font-size: 20px;
+    width: 250px;
+    text-align: center;
+}
+
 .homescreen3{
     width: 320px;
-    padding: 10px;
     text-align: justify;
     margin: 30px;
-    height: 170px;
+    height: 230px;
     position:relative;
     top: -30px;
     background-color: #A8E6A3;
     color: #2E7D32;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -70px;
+    border-top-right-radius: 10px; 
+    border-top-left-radius: 10px;
 }
 
-.footer{
+footer{
    background-color: #39b777; 
-   position: absolute;
-   z-index: 1;
+   position: relative;
+   top:450px;
    width: 100%;
-   height: 50px;
-   top: 1127px;
+   height: 35px;
    text-align: center;
 }
 
