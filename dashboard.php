@@ -45,8 +45,8 @@
                     <td><?php echo $result['jenis_item'];?></td>
                     <td>Rp.<?php echo $result['harga_item'];?></td>
                     <td>
-                        <a href="updateItem.php?id=<?php echo $result['id_item']; ?>" class="btnAksi aksiUbah" style="text-decoration: none; background-color: #37a46d; border-radius: 10px; display: inline-block; padding: 5px; width: 50px; color: white;">Edit</a> 
-                        <a href="deleteItem.php?id=<?php echo $result['id_item']; ?>" class="btnAksi aksiDelete" style="text-decoration: none; background-color: #37a46d; border-radius: 10px; display: inline-block; padding: 5px; width: 50px; color: white;" onclick="return confirm('Apakah Anda yakin ingin menghapus item ini?');">Delete</a>
+                        <a href="updateItem.php?id=<?php echo $result['id_item']; ?>" class="btnAksi aksiUbah" style="text-decoration: none; background-color: #37a46d; border-radius: 10px; display: inline-block; padding: 5px; width: 70px; color: white;">Edit</a> 
+                        <a href="deleteItem.php?id=<?php echo $result['id_item']; ?>" class="btnAksi aksiDelete" style="text-decoration: none; background-color: #37a46d; border-radius: 10px; display: inline-block; padding: 5px; width: 70px; color: white;" onclick="return confirm('Apakah Anda yakin ingin menghapus item ini?');">Delete</a>
                     </td>
                 </tr>
                 <?php } ?>

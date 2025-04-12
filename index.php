@@ -11,7 +11,7 @@
     <?php include "header.html"?>
     <article class="artikel1">
         <h1>WELCOME TO FARM'IN</h1><br>
-        <p style="color: white; font-size: 20px;">Farm'In adalah platform digital yang membantu petani dalam mengakses informasi harga pasar, memesan pupuk dan bibit, serta berkomunikasi dengan komunitas pertanian.</p>
+        <p style="font-size: 20px;">Farm'In adalah platform digital yang membantu petani dalam mengakses informasi harga pasar, memesan pupuk dan bibit, serta berkomunikasi dengan komunitas pertanian.</p>
     </article>
     <div class="homescreen">
         <div class="homescreen3 kontenhs1">
@@ -31,7 +31,7 @@
         </div>
     </div>
     <div class="homescreens2">
-        <h3 style="color: #39464f; font-size: 25px; font-weight: 800; margin: 20px; margin-top: 10px;">KENAPA MEMILIH KAMI?</h3>  
+        <h3 style="color: #39464f;font-size: 25px; font-weight: 800; margin: 20px; margin-top: 10px;">KENAPA MEMILIH KAMI?</h3>  
         <div class="kontenhs2">
             <div class="kontenhs3">
                 <img src="img/time-twenty-four.png" alt="time" style="width: 100px; height: 100px; margin-bottom: 50px;">

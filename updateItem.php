@@ -62,7 +62,7 @@ if (isset($_POST['btnUpdateItem'])) {
         </div>
 
         <i><?= $message ?></i>
-        <button type="submit" id="btnTambahItem" name="btnUpdateItem" style="border: none; background-color:#52b16a; color:white; width: 200px; height: 20px; border-radius: 20px; margin-top: 20px;">UPDATE</button>
+        <button type="submit" id="btnTambahItem" name="btnUpdateItem" style="border: none; background-color:#52b16a; color:white; width: 200px; height: 20px; border-radius: 20px; margin-top: 10px;">UPDATE</button>
     </form>
 </body>
 </html>
