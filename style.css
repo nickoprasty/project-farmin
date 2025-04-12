@@ -48,6 +48,7 @@ h3{
     border: none;
     height: 70px;
     color: #2E7D32;
+    cursor: pointer;
 }
 
 .konten3:hover , .konten2:hover , .konten4:hover{
@@ -217,7 +218,9 @@ footer{
 .tabelData{
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
+    flex-direction: column;
     top: 60px;
 }
 .btnAksi:hover , .btnTambah:hover{
@@ -257,6 +260,22 @@ input, select{
 #labelTambah{
     text-align: right;
 }
+
+.chartBox{
+    width: 1000px;
+    height: 500px;
+}
+.dataPenjualan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+}
+
+
+
 
 @media (max-width: 768px) {
     .artikel1 h1, .artikel1 p {

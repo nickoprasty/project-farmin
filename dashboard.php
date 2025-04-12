@@ -16,6 +16,7 @@
     </style>
 </head>
 <body>
+    
     <nav class ="dashboard">
         <img src="img/logo_farm'in.png" alt="logo farm'in" style="width: 40px; height: 40px; margin-top: 5px;">
         <div class="content konten1"><h2>Farm'In</h2></div>
@@ -52,6 +53,46 @@
                 <?php } ?>
             </tbody>
         </table>
-    </div>   
+        <div class="dataPenjualan">
+            <h2 style="text-align: center; margin-bottom: 50px; font-size: 35px;">Data Penjualan Pupuk</h2>
+            <div class="chartBox">  
+                <canvas id="myChart"></canvas>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>                   
+            <script>
+                fetch("data_transaksi.php")
+                .then((response) => response.json())
+                .then((data) => {
+                    createChart(data, 'bar');
+                });
+
+                function createChart(chartData, type){
+                    const ctx = document.getElementById('myChart').getContext('2d');
+                    new Chart(ctx, {
+                        type: type,
+                        data: {
+                            labels: chartData.map(row => row.nama_pupuk), // Pake nama_pupuk
+                            datasets: [{
+                                label: 'Jumlah Pembelian',
+                                data: chartData.map(row => row.jumlah),
+                                backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                                borderColor: 'rgba(54, 162, 235, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                }
+        </script>
+        </div>
+        
+    </div>
+    
 </body>
 </html>

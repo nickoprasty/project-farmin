@@ -3,9 +3,6 @@
     session_start();
     $login_message = "";
 
-    if(isset($_SESSION["is_login"])){
-        header("location: dashboard.php");
-    }
 
     if(isset($_POST['btnLogin2'])){
        $username = $_POST['username'];
@@ -19,7 +16,11 @@
         $data = $result->fetch_assoc();
         $_SESSION["username"] = $data["username"];
         $_SESSION["is_login"] = true;
-        header("location: dashboard.php");
+        if ($data['role'] == 'admin') {
+            header("Location: dashboard.php");
+        } else {
+            header("Location: user_dashboard.php");
+        }
 
        }else{
         $login_message = "akun tidak ada";
