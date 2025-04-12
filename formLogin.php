@@ -36,7 +36,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="login">
+<body class="login" style="background-color: #A8E6A3;">
     <form action="formLogin.php" method="POST" id="formLogin">
         <div style="margin-top: 5px; margin-bottom: 20px;">
             <a href="index.php" id="btnHome" style="text-decoration: none; color: black; position: absolute; top: 10px; left: 10px; color: #52b16a;">home</a>

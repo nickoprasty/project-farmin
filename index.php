@@ -25,7 +25,7 @@
                 melihat ketersediaan stok, dan melakukan transaksi dengan mudah melalui platform ini.</p>
         </div>
         <div class="homescreen3 kontenhs1">
-            <h3 style="background-color: #2E7D32; color: white; height: 50px; text-align: center; border-top-right-radius: 10px; border-top-left-radius: 10px;">Komunitas Pertanian</h3>    
+            <h3 style="background-color: #2E7D32; color: white; height: 50px; text-align: center; border-top-right-radius: 10px; border-top-left-radius: 10px;">Komunit Pertanian</h3>    
             <p style="padding: 10px;">Tempat bagi petani, pedagang, dan pecinta pertanian untuk berbagi informasi, berdiskusi, serta mendapatkan tips dan solusi terkait pertanian. 
                 Di sini, pengguna dapat bertukar pengalaman dan mendapatkan wawasan dari sesama petani atau ahli pertanian.</p>
         </div>
