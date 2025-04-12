@@ -60,7 +60,7 @@
             </div>
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>                   
             <script>
-                fetch("data_transaksi.php")
+                fetch("data_transaksi.php?timestamp=" + new Date().getTime())
                 .then((response) => response.json())
                 .then((data) => {
                     createChart(data, 'bar');
@@ -71,7 +71,7 @@
                     new Chart(ctx, {
                         type: type,
                         data: {
-                            labels: chartData.map(row => row.nama_pupuk), // Pake nama_pupuk
+                            labels: chartData.map(row => row.nama_pupuk),
                             datasets: [{
                                 label: 'Jumlah Pembelian',
                                 data: chartData.map(row => row.jumlah),
