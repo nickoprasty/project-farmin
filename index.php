@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="img/background2.jpg" alt="background" style="background-size: cover; width: 100vw; position: fixed; z-index: -1;">
+    <img src="img/background2.jpg" alt="background" class="bgFront" style="background-size: cover; width: 100vw; position: fixed; z-index: -1; filter: brightness(80%);">
     <?php include "header.html"?>
     <article class="artikel1">
         <h1>WELCOME TO FARM'IN</h1><br>

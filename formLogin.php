@@ -15,6 +15,7 @@
        if($result->num_rows > 0){
         $data = $result->fetch_assoc();
         $_SESSION["username"] = $data["username"];
+        $_SESSION["id_user"] = $data["id_user"];
         $_SESSION["is_login"] = true;
         if ($data['role'] == 'admin') {
             header("Location: dashboard.php");
