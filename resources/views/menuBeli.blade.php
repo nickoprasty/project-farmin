@@ -33,3 +33,4 @@
     <h3 style="text-align: center;">Tidak ada data pupuk</h3>
 @endif
 @endsection
+

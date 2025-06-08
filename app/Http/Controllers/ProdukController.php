@@ -13,3 +13,4 @@ class ProdukController extends Controller
         return view('admin.produk', compact('produk'));
     }
 }
+

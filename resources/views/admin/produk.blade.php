@@ -18,7 +18,7 @@
                 </tr>
             </thead>
             <tbody>
-                @forelse($produk as $p)
+                @forelse($pupuk as $p)
                 <tr>
                     <td>{{ $p->nama_pupuk }}</td>
                     <td>Rp.{{ number_format($p->harga, 0, ',', '.') }}</td>

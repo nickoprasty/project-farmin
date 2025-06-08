@@ -12,8 +12,11 @@ class PupukController extends Controller
      */
     public function index()
     {
-        $produk = DB::table('pupuk')->get();
-        return view('admin.produk', compact('produk'));
+        $pupuk = DB::table('pupuk')->get();
+        if (session('role') === 'admin') {
+            return view('admin.produk', compact('pupuk'));
+        }
+        return view('menuBeli', compact('pupuk'));
     }
 
     /**
@@ -75,7 +78,6 @@ class PupukController extends Controller
             'harga' => $request->harga,
             'gambar' => $request->gambar,
             'deskripsi_pupuk' => $request->deskripsi_pupuk,
-            'updated_at' => now(),
         ]);
 
         return redirect()->route('pupuk.index')->with('success', 'Pupuk berhasil diperbarui!');
