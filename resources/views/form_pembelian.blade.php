@@ -31,6 +31,11 @@
                 <textarea id="alamat" name="alamat" required class="w-full p-[8px] border-[1px] border-[#ddd] rounded-[5px] h-[100px]"></textarea>
             </div>
 
+            <div class="mb-[20px]">
+                <label for="no_hp" class="block mb-[5px]">Nomor Telepon:</label>
+                <input type="text" id="no_hp" name="no_hp" required class="w-full p-[8px] border-[1px] border-[#ddd] rounded-[5px]">
+            </div>
+
             <div class="text-center">
                 <button type="submit" class="inline-block bg-[#39b777] text-white p-[15px_30px] rounded-[30px] no-underline font-semibold mt-[20px] border-none cursor-pointer hover:bg-[#74eaae]">Konfirmasi Pembelian</button>
                 <a href="{{ route('menuBeli') }}" class="inline-block ml-[10px] text-[#39b777] no-underline">Kembali</a>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class PupukController extends Controller
 {
@@ -108,6 +109,7 @@ class PupukController extends Controller
 
     public function prosesPembelian(Request $request)
     {
+        Log::info('Metode prosesPembelian dipanggil.');
         $request->validate([
             'id_pupuk' => 'required|integer',
             'jumlah' => 'required|integer|min:1',
@@ -116,6 +118,8 @@ class PupukController extends Controller
         ]);
 
         $id_user = session('id_user');
+        Log::info('ID User dari sesi: ' . $id_user);
+
         if (!$id_user) {
             return redirect('/login')->with('error', 'Silakan login terlebih dahulu!');
         }
@@ -127,14 +131,23 @@ class PupukController extends Controller
 
         $total_harga = $request->jumlah * $pupuk->harga;
 
-        DB::table('transaksi_pupuk')->insert([
+        $dataToInsert = [
             'id_user' => $id_user,
             'id_pupuk' => $request->id_pupuk,
             'jumlah' => $request->jumlah,
             'total_harga' => $total_harga,
             'tanggal_transaksi' => now()
-        ]);
+        ];
 
-        return redirect('/user_dashboard')->with('success', 'Pembelian berhasil!');
+        Log::info('Mencoba menyisipkan data transaksi: ' . json_encode($dataToInsert));
+
+        try {
+            DB::table('transaksi_pupuk')->insert($dataToInsert);
+            Log::info('Transaksi berhasil dicatat ke database.');
+            return redirect('/user_dashboard')->with('success', 'Pembelian berhasil!');
+        } catch (\Exception $e) {
+            Log::error('Gagal mencatat transaksi: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Terjadi kesalahan saat memproses pembelian. Silakan coba lagi.');
+        }
     }
 }
