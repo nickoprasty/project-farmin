@@ -6,29 +6,29 @@
 @endsection
 
 @section('content')
-    <h2 style="margin-bottom: 30px; text-align: center;">Harga Pasar</h2>
-    <div class="table-responsive">
-        <table class="tabelItem" style="width:100%; text-align:center;">
-            <thead>
+    <h2 class="mb-8 text-2xl text-center">Harga Pasar</h2>
+    <div class="overflow-x-auto">
+        <table class="w-full text-center border-collapse bg-white shadow-md rounded-lg overflow-hidden">
+            <thead class="bg-[#39b777] text-white">
                 <tr>
-                    <th>Nama</th>
-                    <th>Jenis</th>
-                    <th>Harga per Kilo (Kg)</th>
-                    <th>Aksi</th>
+                    <th class="px-6 py-3 border border-gray-300 text-left text-sm font-semibold uppercase tracking-wider">Nama</th>
+                    <th class="px-6 py-3 border border-gray-300 text-left text-sm font-semibold uppercase tracking-wider">Jenis</th>
+                    <th class="px-6 py-3 border border-gray-300 text-left text-sm font-semibold uppercase tracking-wider">Harga per Kilo (Kg)</th>
+                    <th class="px-6 py-3 border border-gray-300 text-center text-sm font-semibold uppercase tracking-wider">Aksi</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($items as $item)
-                <tr>
-                    <td>{{ $item->nama_item }}</td>
-                    <td>{{ $item->jenis_item }}</td>
-                    <td>Rp.{{ number_format($item->harga_item, 0, ',', '.') }}</td>
-                    <td>
-                        <a href="{{ route('item.edit', $item->id_item) }}" class="btnAksi aksiUbah" style="background:#37a46d; color:#fff; border-radius:8px; padding:5px 15px; text-decoration:none;">Edit</a>
-                        <form action="{{ route('item.destroy', $item->id_item) }}" method="POST" style="display:inline;">
+                <tr class="hover:bg-gray-50">
+                    <td class="px-6 py-4 border border-gray-200">{{ $item->nama_item }}</td>
+                    <td class="px-6 py-4 border border-gray-200">{{ $item->jenis_item }}</td>
+                    <td class="px-6 py-4 border border-gray-200">Rp.{{ number_format($item->harga_item, 0, ',', '.') }}</td>
+                    <td class="px-6 py-4 border border-gray-200 text-center">
+                        <a href="{{ route('item.edit', $item->id_item) }}" class="inline-block bg-[#37a46d] text-white px-4 py-2 rounded-lg hover:bg-[#2e8b57] focus:outline-none focus:ring-2 focus:ring-[#37a46d] focus:ring-opacity-50 transition-colors duration-200">Edit</a>
+                        <form action="{{ route('item.destroy', $item->id_item) }}" method="POST" class="inline-block ml-2">
                             @csrf
                             @method('DELETE')
-                            <button class="btnAksi aksiDelete" style="background:#e74c3c; color:#fff; border-radius:8px; padding:5px 15px; border:none;" onclick="return confirm('Yakin hapus item?')">Delete</button>
+                            <button type="submit" class="inline-block bg-[#e74c3c] text-white px-4 py-2 rounded-lg hover:bg-[#c0392b] focus:outline-none focus:ring-2 focus:ring-[#e74c3c] focus:ring-opacity-50 transition-colors duration-200" onclick="return confirm('Yakin hapus item?')">Delete</button>
                         </form>
                     </td>
                 </tr>
@@ -36,7 +36,9 @@
             </tbody>
         </table>
     </div>
-    <div style="margin-bottom: 20px; text-align: center;">
-        <a href="{{ route('item.create') }}" class="btnTambah" style="background:#39b777; color:#fff; padding:10px 20px; border-radius:8px; text-decoration:none;">+ Tambah Item</a>
+    <div class="my-5 text-center">
+        <a href="{{ route('item.create') }}" class="inline-block bg-[#37a46d] text-white rounded-lg px-6 py-3 font-semibold hover:bg-[#2e8b57] focus:outline-none focus:ring-2 focus:ring-[#37a46d] focus:ring-opacity-50 transition-colors duration-200">
+            + Tambah Item
+        </a>
     </div>
 @endsection

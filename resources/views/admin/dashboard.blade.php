@@ -6,12 +6,12 @@
 @endsection
 
 @section('content')
-    <h2 style="text-align: center; margin-bottom: 30px; margin-top: 20px;">Grafik Penjualan</h2>
-    <div style="background:#fff; border-radius:10px; padding:30px; margin-bottom:30px;">
+    <h2 class="text-center mb-[30px] mt-[20px]">Grafik Penjualan</h2>
+    <div class="bg-white rounded-[10px] p-[30px] mb-[30px]">
         <canvas id="myChart"></canvas>
     </div>
-    <h2 style="text-align: center; margin-bottom: 30px; margin-top: 20px;">Total Penjualan</h2>
-    <div style="background:#fff; border-radius:10px; padding:30px;">
+    <h2 class="text-center mb-[30px] mt-[20px]">Total Penjualan</h2>
+    <div class="bg-white rounded-[10px] p-[30px]">
         <h3>Rp{{ number_format($total_penjualan, 0, ',', '.') }}</h3>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

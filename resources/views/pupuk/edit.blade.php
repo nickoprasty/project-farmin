@@ -1,35 +1,57 @@
-@extends('layouts.dashboard')
+@extends('layouts.app')
 @section('title', 'Edit Pupuk')
 
 @section('content')
-<div class="bodyEditItem"> {{-- Gunakan class ini jika untuk centering form --}}
-    <form action="{{ route('pupuk.update', $pupuk->id_pupuk) }}" method="POST" class="formEditItem">
+<div class="h-screen flex items-center justify-center">
+    <form action="{{ route('pupuk.update', $pupuk->id_pupuk) }}" method="POST" class="w-[450px] h-[400px] p-[20px] bg-white border border-black rounded-[5px] shadow-[2px_2px_5px_rgba(0,0,0,0.3)] relative flex flex-col items-center justify-center">
         @csrf
         @method('PUT')
-        <div>
-            <a href="{{ route('pupuk.index') }}" id="btnKembali" style="position: absolute; left: 10px; top: 10px; text-decoration: none; color: black; font-weight: 500; font-size: 13px;">Kembali</a>
+        
+        {{-- Tombol Kembali --}}
+        <a href="{{ route('pupuk.index') }}" class="absolute top-[20px] left-[20px] no-underline text-black font-medium text-[13px]">Kembali</a>
+        
+        {{-- Judul EDIT PUPUK --}}
+        <h3 class="text-center font-semibold text-[1.25rem] mb-[20px]">EDIT PUPUK</h3>
+        
+        {{-- Nama Pupuk --}}
+        <div class="w-full flex items-center mb-[10px]">
+            <label for="nama_pupuk" class="w-[180px] text-left">Nama Pupuk:</label>
+            <input type="text" name="nama_pupuk" id="nama_pupuk" value="{{ $pupuk->nama_pupuk }}" required class="flex-1 p-[10px] border-2 border-[#ccc] rounded-[8px] bg-[#f8f8f8] text-[16px] transition-all duration-300 focus:border-[#4CAF50] focus:bg-white focus:shadow-[0px_0px_8px_rgba(76,175,80,0.4)] focus:outline-none ml-[5px]">
         </div>
-        <div style="margin-bottom: 20px;">
-            <h3>EDIT PUPUK</h3>
+        @error('nama_pupuk')
+            <div class="text-red-500 text-sm mt-1 ml-[185px] w-full text-left">{{ $message }}</div>
+        @enderror
+        
+        {{-- Harga --}}
+        <div class="w-full flex items-center mb-[10px]">
+            <label for="harga" class="w-[180px] text-left">Harga:</label>
+            <input type="number" name="harga" id="harga" value="{{ $pupuk->harga }}" required class="flex-1 p-[10px] border-2 border-[#ccc] rounded-[8px] bg-[#f8f8f8] text-[16px] transition-all duration-300 focus:border-[#4CAF50] focus:bg-white focus:shadow-[0px_0px_8px_rgba(76,175,80,0.4)] focus:outline-none ml-[5px]">
         </div>
-        <div class="tambahNama" style="width: 80%;">
-            <label id="labelTambah" for="nama_pupuk">Nama Pupuk: </label>
-            <input type="text" name="nama_pupuk" id="nama_pupuk" value="{{ $pupuk->nama_pupuk }}" required style="margin-left: 50px;">
+        @error('harga')
+            <div class="text-red-500 text-sm mt-1 ml-[185px] w-full text-left">{{ $message }}</div>
+        @enderror
+        
+        {{-- Nama File Gambar --}}
+        <div class="w-full flex items-center mb-[10px]">
+            <label for="gambar" class="w-[180px] text-left">Nama File Gambar:</label>
+            <input type="text" name="gambar" id="gambar" value="{{ $pupuk->gambar }}" placeholder="contoh.jpg" class="flex-1 p-[10px] border-2 border-[#ccc] rounded-[8px] bg-[#f8f8f8] text-[16px] transition-all duration-300 focus:border-[#4CAF50] focus:bg-white focus:shadow-[0px_0px_8px_rgba(76,175,80,0.4)] focus:outline-none ml-[5px]">
         </div>
-        <div class="tambahHarga" style="width: 80%;">
-            <label id="labelTambah" for="harga">Harga: </label>
-            <input type="number" name="harga" id="harga" value="{{ $pupuk->harga }}" required style="margin-left: 100px;">
+        @error('gambar')
+            <div class="text-red-500 text-sm mt-1 ml-[185px] w-full text-left">{{ $message }}</div>
+        @enderror
+        
+        {{-- Deskripsi --}}
+        <div class="w-full flex items-center mb-[20px]">
+            <label for="deskripsi_pupuk" class="w-[180px] text-left">Deskripsi:</label>
+            <textarea class="flex-1 p-[10px] border-2 border-[#ccc] rounded-[8px] bg-[#f8f8f8] text-[16px] transition-all duration-300 focus:border-[#4CAF50] focus:bg-white focus:shadow-[0px_0px_8px_rgba(76,175,80,0.4)] focus:outline-none ml-[5px]" name="deskripsi_pupuk" id="deskripsi_pupuk">{{ $pupuk->deskripsi_pupuk }}</textarea>
         </div>
-        <div class="tambahJenis" style="width: 80%;">
-            <label id="labelTambah" for="gambar">Nama File Gambar: </label>
-            <input type="text" name="gambar" id="gambar" value="{{ $pupuk->gambar }}" placeholder="contoh.jpg" style="margin-left: 10px;">
-        </div>
-        <div class="tambahJenis" style="width: 80%; display: flex; justify-content: left;">
-            <label id="labelTambah" for="deskripsi_pupuk">Deskripsi: </label>
-            <textarea style="margin-left: 80px; width: 300px;" name="deskripsi_pupuk" id="deskripsi_pupuk">{{ $pupuk->deskripsi_pupuk }}</textarea>
-        </div>
-        <div>
-            <button type="submit" id="btnTambahItem" style="border: none; background-color:#52b16a; color:white; width: 200px; height: 20px; border-radius: 20px; margin-top: 20px;">UPDATE</button>
+        @error('deskripsi_pupuk')
+            <div class="text-red-500 text-sm mt-1 ml-[185px] w-full text-left">{{ $message }}</div>
+        @enderror
+        
+        {{-- Tombol UPDATE --}}
+        <div class="w-full text-center mt-[10px]">
+            <button type="submit" class="border-none bg-[#52b16a] text-white w-[200px] py-[10px] px-[20px] rounded-full hover:bg-[#a1edb4] text-center">UPDATE</button>
         </div>
     </form>
 </div>

@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="{{ asset('style.css') }}">
 </head>
 <body>  
-    <div class="container">
-        <img src="img/logo_farm'in.png" alt="logo farm'in" style="width: 40px; height: 40px; margin-top: 5px;">
-        <div class="content konten1" style="color: #2E7D32;"><h2>Farm'In</h2></div>
-        <div class="content konten2"><a href="{{ route('login') }}" id="btnLogin" style="color: #2E7D32; text-decoration: none;">Login</a></div>
-        <div class="content konten3"><a href="{{ route('register') }}" id="btnRegister" style="color: #2E7D32; text-decoration: none;">Register</a></div>
+    <div class="bg-[#A8E6A3] h-[70px] flex flex-wrap shadow-[0px_4px_7px_rgba(0,0,0,0.1)] relative z-10">
+        <img src="{{ asset('img/logo_farm\'in.png') }}" alt="logo farm'in" class="w-[40px] h-[40px] mt-[5px]">
+        <div class="flex-grow-[3] text-[#2E7D32] m-[10px] p-[5px]"><h2>Farm'In</h2></div>
+        <div class="flex-grow-[0] pt-[20px] text-center w-[100px] hover:bg-[#54c370]"><a href="{{ route('login') }}" id="btnLogin" class="text-[#2E7D32] no-underline">Login</a></div>
+        <div class="flex-grow-[0] pt-[20px] text-center w-[100px] hover:bg-[#54c370]"><a href="{{ route('register') }}" id="btnRegister" class="text-[#2E7D32] no-underline">Register</a></div>
     </div>
 </body>
 </html>

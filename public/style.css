@@ -1,618 +1,618 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-html, body {
-    width: 100%;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f9f7f4;
-    font-family: 'ubuntu', sans-serif;
-}
-
-*{
-    margin:0px;
-    padding:0px;
-    font-family: 'ubuntu', sans-serif;
-    box-sizing: border-box;
-}
-
-h3{
-    padding: 10px;
-}
-.container , .dashboard{
-    background-color: #A8E6A3;
-    height: 70px;
-    display: flex;
-    flex-wrap: wrap;
-    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);;
-}
-.container{
-    position: relative;
-    z-index: 1;
-}
-.konten1{
-    flex-grow: 3;
-    color: #2E7D32;
-    margin: 10px;
-    padding: 5px;
-}
-.konten2{
-    flex-grow: 0;    
-    padding-top: 20px;
-    text-align: center;    
-    width: 100px;
-
-}
-.konten3{
-    flex-grow: 0;    
-    padding-top: 20px;
-    text-align: center;   
-    width: 100px;
-}
-.konten4{
-    flex-grow: 1;     
-    text-align: center;
-    background-color: #A8E6A3;
-    width: 100px;
-    border: none;
-    height: 70px;
-    color: #2E7D32;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 15px;
-}
-.konten5{
-    flex-grow: 0;     
-    text-align: center;
-    background-color: #A8E6A3;
-    width: 100px;
-    border: none;
-    height: 70px;
-    color: #2E7D32;
-    cursor: pointer;
-}
-#btnHistory{
-    text-decoration: none;
-    color: #2E7D32;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    width: 100%;
-    height: 100%;
-    font-weight: 500;
-    font-size: 15px;
-}
-
-
-.konten3:hover , .konten2:hover , .konten4:hover , .konten5:hover{
-    background-color: #54c370;
-}
-
-#formLogin , #formRegister{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 400px;
-    width: 350px;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border: solid;
-    margin: 10px;
-    border-width: 1px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
-}
-.login{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh;
-    margin: 0;
-}
-
-input, select {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-input:hover, input:focus, select:hover, select:focus {
-    border-color: #4CAF50;
-    background-color: white;
-    box-shadow: 0px 0px 8px rgba(76, 175, 80, 0.4);
-    outline: none;
-}
-
-#username1 , #password1{
-    padding: 5px;
-    border: none;
-}
-
-#btnLogin2 , #btnRegister2{
-    border: none;
-    background-color: #52b16a;
-    color: white;
-    border-radius: 30px;
-    margin: 10px;
-    padding: 10px;
-    width: 200px;
-}
-
-#btnLogin2:hover , #btnRegister2:hover , #btnTambahItem:hover{
-    background-color: #a1edb4 !important;
-    color: white;
-}
-
-#btnHome:hover , #loginDisini:hover , #buatAkun:hover , #btnKembali:hover{
-    color: #a1edb4 !important;
-}
-
-#email1 , #username1 , #password1{
-    margin-top: 8px;
-}
-
-#btnHome {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: #52b16a;
-    text-decoration: none;
-}
-
-.artikel1{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 250px;
-    z-index: 1;
-    max-width: 100%;
-    color: white;
-    font-size: large;
-    font-weight: 500;
-}
-.artikel1 h1, .artikel1 p{
-    width: 500px;
-} 
-
-.homescreen{
-    display: flex;
-    justify-content: center; 
-    background-color: #f9f7f4; 
-    height: 350px; 
-    position: relative; 
-    top: 450px; 
-    z-index: 0;
-    flex-wrap: wrap;
-}
-.homescreens2{
-    background-color: white;
-    position:relative;
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.kontenhs2{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.kontenhs3{
-    margin: 20px;
-    margin-top: 50px;
-    font-size: 20px;
-    width: 250px;
-    text-align: center;
-}
-
-.homescreen3 {
-    width: 320px;
-    max-width: 90%;
-    padding: 20px;
-    text-align: justify;
-    margin: 30px;
-    min-height: 230px;
-    background-color: #A8E6A3;
-    color: #2E7D32;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    word-wrap: break-word;
-    overflow: hidden;
-}
-
-
-
-
-footer {
-    background-color: #39b777; 
-    width: 100%;
-    height: 35px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-  
-
-.tabelItem{
-    width: 80%;
-
-}
-
-.theadItem th{
-    border-collapse: collapse;
-    border-bottom: 3px solid rgb(140 140 140);
-    padding: 10px;
-}
-.tbodyItem td{
-    text-align: center;
-    border-bottom: 1px solid rgb(140 140 140) ;
-    padding: 5px;
-    width: 50px;
-}
-.tabelData{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    flex-direction: column;
-    top: 60px;
-}
-.btnAksi:hover , .btnTambah:hover{
-    background-color: #74eaae !important;
-}
-.bodyTambahItem{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.formTambahItem{
-    position: relative;
-    display: flex;
-    align-items: center; 
-    justify-content: center;   
-    border: 1px solid black;
-    border-radius: 5px;
-    flex-direction: column;
-    background-color: white;
-    width: 300px;
-    height: 350px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
-}
-.bodyEditItem{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.formEditItem{
-    position: relative;
-    display: flex;
-    align-items: center; 
-    justify-content: center;   
-    border: 1px solid black;
-    border-radius: 5px;
-    flex-direction: column;
-    background-color: white;
-    width: 450px;
-    height: 400px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
-}
-
-.tambahNama , .tambahHarga , .tambahJenis{
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-input, select{
-    flex: 1;
-}
-#labelTambah{
-    text-align: right;
-}
-
-.chartBox{
-    width: 1000px;
-    height: 500px;
-}
-.dataPenjualan{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 800px;
-}
-
-.containerBeli{ 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    gap: 30px;
-    padding: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.kontenBeli1{
-    border: none;
-    color: #2E7D32;
-    height: 500px;
-    width: calc(33.333% - 20px);
-    min-width: 300px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    position: relative;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.kontenBeli1 img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border-radius: 10px;
-}
-
-.kontenBeli1 h3 {
-    text-align: center;
-    margin: 0 0 15px 0;
-    color: #2E7D32;
-    font-size: 1.4em;
-    font-weight: 600;
-}
-
-.kontenBeli1 p {
-    text-align: justify;
-    margin: 10px 0;
-    flex-grow: 1;
-    color: #666;
-    line-height: 1.6;
-    font-size: 0.95em;
-}
-
-.buttonBeli{
-    border: none;
-    background-color: #39b777;
-    color: white;
-    border-radius: 30px;
-    padding: 12px 25px;
-    width: 120px;
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.buttonBeli:hover{
-    background-color: #74eaae !important;
-}
-
-@media (max-width: 768px) {
-    .artikel1 h1, .artikel1 p {
-        width: 90%;
-        font-size: 18px;
+    *, *::before, *::after {
+        box-sizing: border-box;
     }
 
-    .homescreen {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f9f7f4;
+        font-family: 'ubuntu', sans-serif;
+    }
+
+    *{
+        margin:0px;
+        padding:0px;
+        font-family: 'ubuntu', sans-serif;
+        box-sizing: border-box;
+    }
+
+    h3{
+        padding: 10px;
+    }
+    .container , .dashboard{
+        background-color: #A8E6A3;
+        height: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);;
+    }
+    .container{
+        position: relative;
+        z-index: 1;
+    }
+    .konten1{
+        flex-grow: 3;
+        color: #2E7D32;
+        margin: 10px;
+        padding: 5px;
+    }
+    .konten2{
+        flex-grow: 0;    
+        padding-top: 20px;
+        text-align: center;    
+        width: 100px;
+
+    }
+    .konten3{
+        flex-grow: 0;    
+        padding-top: 20px;
+        text-align: center;   
+        width: 100px;
+    }
+    .konten4{
+        flex-grow: 1;     
+        text-align: center;
+        background-color: #A8E6A3;
+        width: 100px;
+        border: none;
+        height: 70px;
+        color: #2E7D32;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .konten5{
+        flex-grow: 0;     
+        text-align: center;
+        background-color: #A8E6A3;
+        width: 100px;
+        border: none;
+        height: 70px;
+        color: #2E7D32;
+        cursor: pointer;
+    }
+    #btnHistory{
+        text-decoration: none;
+        color: #2E7D32;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+
+    .konten3:hover , .konten2:hover , .konten4:hover , .konten5:hover{
+        background-color: #54c370;
+    }
+
+    #formLogin , #formRegister{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        width: 350px;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: solid;
+        margin: 10px;
+        border-width: 1px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    }
+    .login{
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh;
+        margin: 0;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    input:hover, input:focus, select:hover, select:focus {
+        border-color: #4CAF50;
+        background-color: white;
+        box-shadow: 0px 0px 8px rgba(76, 175, 80, 0.4);
+        outline: none;
+    }
+
+    #username1 , #password1{
+        padding: 5px;
+        border: none;
+    }
+
+    #btnLogin2 , #btnRegister2{
+        border: none;
+        background-color: #52b16a;
+        color: white;
+        border-radius: 30px;
+        margin: 10px;
+        padding: 10px;
+        width: 200px;
+    }
+
+    #btnLogin2:hover , #btnRegister2:hover , #btnTambahItem:hover{
+        background-color: #a1edb4 !important;
+        color: white;
+    }
+
+    #btnHome:hover , #loginDisini:hover , #buatAkun:hover , #btnKembali:hover{
+        color: #a1edb4 !important;
+    }
+
+    #email1 , #username1 , #password1{
+        margin-top: 8px;
+    }
+
+    #btnHome {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: #52b16a;
+        text-decoration: none;
+    }
+
+    .artikel1{
+        text-align: center;
+        display: flex;
         flex-direction: column;
         align-items: center;
-        height: auto;
-        top: 200px;
+        position: relative;
+        top: 250px;
+        z-index: 1;
+        max-width: 100%;
+        color: white;
+        font-size: large;
+        font-weight: 500;
+    }
+    .artikel1 h1, .artikel1 p{
+        width: 500px;
+    } 
+
+    .homescreen{
+        display: flex;
+        justify-content: center; 
+        background-color: #f9f7f4; 
+        height: 350px; 
+        position: relative; 
+        top: 450px; 
+        z-index: 0;
+        flex-wrap: wrap;
+    }
+    .homescreens2{
+        background-color: white;
+        position:relative;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kontenhs2{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .kontenhs3{
+        margin: 20px;
+        margin-top: 50px;
+        font-size: 20px;
+        width: 250px;
+        text-align: center;
     }
 
     .homescreen3 {
-        width: 90%;
-        margin: 20px 0;
-        top: 0;
-        height: auto;
-    }
-
-    .homescreens2 {
-        height: auto;
+        width: 320px;
+        max-width: 90%;
         padding: 20px;
+        text-align: justify;
+        margin: 30px;
+        min-height: 230px;
+        background-color: #A8E6A3;
+        color: #2E7D32;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        word-wrap: break-word;
+        overflow: hidden;
     }
 
-    .kontenhs2 {
-        flex-direction: column;
+
+
+
+    footer {
+        background-color: #39b777; 
+        width: 100%;
+        height: 35px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
         align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+    
+
+    .tabelItem{
+        width: 80%;
+
     }
 
-    .kontenhs3 {
-        width: 90%;
-        font-size: 18px;
-        margin: 20px 0;
+    .theadItem th{
+        border-collapse: collapse;
+        border-bottom: 3px solid rgb(140 140 140);
+        padding: 10px;
     }
-
-    img[alt="background"] {
-        object-fit: cover;
+    .tbodyItem td{
+        text-align: center;
+        border-bottom: 1px solid rgb(140 140 140) ;
+        padding: 5px;
+        width: 50px;
+    }
+    .tabelData{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        flex-direction: column;
+        top: 60px;
+    }
+    .btnAksi:hover , .btnTambah:hover{
+        background-color: #74eaae !important;
+    }
+    .bodyTambahItem{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 100vh;
     }
-
-    .artikel1 {
-        top: 150px;
+    .formTambahItem{
+        position: relative;
+        display: flex;
+        align-items: center; 
+        justify-content: center;   
+        border: 1px solid black;
+        border-radius: 5px;
+        flex-direction: column;
+        background-color: white;
+        width: 300px;
+        height: 350px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
     }
-}
+    .bodyEditItem{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .formEditItem{
+        position: relative;
+        display: flex;
+        align-items: center; 
+        justify-content: center;   
+        border: 1px solid black;
+        border-radius: 5px;
+        flex-direction: column;
+        background-color: white;
+        width: 450px;
+        height: 400px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    }
 
-/* Style untuk User Dashboard */
-.dashboard-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-}
+    .tambahNama , .tambahHarga , .tambahJenis{
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+    input, select{
+        flex: 1;
+    }
+    #labelTambah{
+        text-align: right;
+    }
 
-.price-section {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 30px;
-}
+    .chartBox{
+        width: 1000px;
+        height: 500px;
+    }
+    .dataPenjualan{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 800px;
+    }
 
-.price-section h2 {
-    color: #2E7D32;
-    margin-bottom: 20px;
-}
+    .containerBeli{ 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: 30px;
+        padding: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-.tabelItem {
-    width: 80%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    position: relative;
-    left: 10%;
-    
-}
-.tabelItem2 {
-    width: 80%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    position: relative;
-    
-}
+    .kontenBeli1{
+        border: none;
+        color: #2E7D32;
+        height: 500px;
+        width: calc(33.333% - 20px);
+        min-width: 300px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        position: relative;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
 
-.theadItem th {
-    background-color: #39b777;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
+    .kontenBeli1 img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
 
-.tbodyItem td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #ddd;
-}
+    .kontenBeli1 h3 {
+        text-align: center;
+        margin: 0 0 15px 0;
+        color: #2E7D32;
+        font-size: 1.4em;
+        font-weight: 600;
+    }
 
-.tbodyItem tr:hover {
-    background-color: #f5f5f5;
-}
+    .kontenBeli1 p {
+        text-align: justify;
+        margin: 10px 0;
+        flex-grow: 1;
+        color: #666;
+        line-height: 1.6;
+        font-size: 0.95em;
+    }
 
-.buy-section {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    text-align: center;
-}
+    .buttonBeli{
+        border: none;
+        background-color: #39b777;
+        color: white;
+        border-radius: 30px;
+        padding: 12px 25px;
+        width: 120px;
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-.buy-section h2 {
-    color: #2E7D32;
-    margin-bottom: 20px;
-}
+    .buttonBeli:hover{
+        background-color: #74eaae !important;
+    }
 
-.buy-button {
-    display: inline-block;
-    background-color: #39b777;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 20px;
-    border: none;
-    cursor: pointer;
-}
+    @media (max-width: 768px) {
+        .artikel1 h1, .artikel1 p {
+            width: 90%;
+            font-size: 18px;
+        }
 
-.buy-button:hover {
-    background-color: #74eaae;
-}
+        .homescreen {
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            top: 200px;
+        }
 
-.btnAksi {
-    margin-right: 5px;
-    padding: 5px 15px;
-    border: none;
-    border-radius: 20px;
-    background-color: #52b16a;
-    color: white;
-    cursor: pointer;
-}
-.btnAksi.aksiDelete {
-    background-color: #e74c3c;
-    height: 30px;
-}
-.btnAksi.aksiUbah {
-    background-color: #37a46d;
-    height: 30px;
-}
+        .homescreen3 {
+            width: 90%;
+            margin: 20px 0;
+            top: 0;
+            height: auto;
+        }
 
-.history-card {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    transition: box-shadow 0.2s;
-}
-.history-card:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-}
+        .homescreens2 {
+            height: auto;
+            padding: 20px;
+        }
 
-.table-responsive {
-    width: 100%;
-    overflow-x: auto;
-    margin-bottom: 20px;
-}
+        .kontenhs2 {
+            flex-direction: column;
+            align-items: center;
+        }
 
-.tabelItem {
-    border-collapse: collapse;
-    background: #fff;
-    margin: 0 auto;
-    position: relative;
-    left: 0px;
-}
+        .kontenhs3 {
+            width: 90%;
+            font-size: 18px;
+            margin: 20px 0;
+        }
 
-.tabelItem th, .tabelItem td {
-    padding: 16px 12px;
-    border-bottom: 1px solid #e0e0e0;
-    text-align: center;
-    font-size: 1em;
-}
+        img[alt="background"] {
+            object-fit: cover;
+            height: 100vh;
+        }
 
-.tabelItem th {
-    background: #39b777;
-    color: #fff;
-    font-size: 1.1em;
-    font-weight: bold;
-}
+        .artikel1 {
+            top: 150px;
+        }
+    }
 
-.tabelItem tr:hover {
-    background: #f5f5f5;
-}
+    /* Style untuk User Dashboard */
+    .dashboard-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .price-section {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .price-section h2 {
+        color: #2E7D32;
+        margin-bottom: 20px;
+    }
+
+    .tabelItem {
+        width: 80%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        position: relative;
+        left: 10%;
+        
+    }
+    .tabelItem2 {
+        width: 80%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        position: relative;
+        
+    }
+
+    .theadItem th {
+        background-color: #39b777;
+        color: white;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .tbodyItem td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .tbodyItem tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .buy-section {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        text-align: center;
+    }
+
+    .buy-section h2 {
+        color: #2E7D32;
+        margin-bottom: 20px;
+    }
+
+    .buy-button {
+        display: inline-block;
+        background-color: #39b777;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .buy-button:hover {
+        background-color: #74eaae;
+    }
+
+    .btnAksi {
+        margin-right: 5px;
+        padding: 5px 15px;
+        border: none;
+        border-radius: 20px;
+        background-color: #52b16a;
+        color: white;
+        cursor: pointer;
+    }
+    .btnAksi.aksiDelete {
+        background-color: #e74c3c;
+        height: 30px;
+    }
+    .btnAksi.aksiUbah {
+        background-color: #37a46d;
+        height: 30px;
+    }
+
+    .history-card {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        transition: box-shadow 0.2s;
+    }
+    .history-card:hover {
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        margin-bottom: 20px;
+    }
+
+    .tabelItem {
+        border-collapse: collapse;
+        background: #fff;
+        margin: 0 auto;
+        position: relative;
+        left: 0px;
+    }
+
+    .tabelItem th, .tabelItem td {
+        padding: 16px 12px;
+        border-bottom: 1px solid #e0e0e0;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .tabelItem th {
+        background: #39b777;
+        color: #fff;
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+
+    .tabelItem tr:hover {
+        background: #f5f5f5;
+    }
 
 
-.main-content {
-    margin-left: 220px;
-    padding: 30px 40px;
-    min-height: 100vh;
-    box-sizing: border-box;
-    width: calc(100% - 220px);
-    overflow-x: hidden;
-}
+    .main-content {
+        margin-left: 220px;
+        padding: 30px 40px;
+        min-height: 100vh;
+        box-sizing: border-box;
+        width: calc(100% - 220px);
+        overflow-x: hidden;
+    }
 
