@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class TransaksiController extends Controller
 {
@@ -19,24 +20,19 @@ class TransaksiController extends Controller
 
     public function history()
     {
-        // Pastikan user sudah login
-        $id_user = session('id_user');
+        $id_user = Session::get('id_user');
+
         if (!$id_user) {
-            return redirect('/login')->with('error', 'Silakan login terlebih dahulu!');
+            
+            return redirect('/login')->with('error', 'Silakan login untuk melihat riwayat pembelian.');
         }
 
-        // Ambil data transaksi user
         $history = \DB::table('transaksi_pupuk as t')
-            ->join('pupuk as p', 't.id_pupuk', '=', 'p.id_pupuk')
-            ->select(
-                't.*',
-                'p.nama_pupuk',
-                'p.gambar',
-                'p.harga as harga_pupuk'
-            )
-            ->where('t.id_user', $id_user)
-            ->orderBy('t.tanggal_transaksi', 'desc')
-            ->get();
+                    ->join('pupuk', 't.id_pupuk', '=', 'pupuk.id_pupuk')
+                    ->where('t.id_user', $id_user)
+                    ->select('t.*', 'pupuk.nama_pupuk', 'pupuk.harga as harga_pupuk', 'pupuk.gambar')
+                    ->orderBy('tanggal_transaksi', 'desc')
+                    ->get();
 
         return view('history', compact('history'));
     }

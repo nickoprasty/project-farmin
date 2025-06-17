@@ -2,21 +2,26 @@
 @section('title', 'History Pembelian')
 @section('content')
 <script src="https://cdn.tailwindcss.com"></script>
-<nav class="bg-[#A8E6A3] h-[70px] flex flex-wrap shadow-[0px_4px_7px_rgba(0,0,0,0.1)] items-center">
-    <img src="{{ asset('img/logo_farm\'in.png') }}" alt="logo farm'in" class="w-[40px] h-[40px] mt-[5px]">
-    <div class="flex-grow-[3] text-[#2E7D32] m-[10px] p-[5px] font-semibold"><h2>Farm'In</h2></div>
-    <div class="flex-grow-[0] text-center w-[100px] h-[70px] bg-[#A8E6A3] text-[#2E7D32] cursor-pointer hover:bg-[#54c370] flex items-center justify-center">
-        <a href="{{ url('/user_dashboard') }}" id="btnHistory" class="text-[#2E7D32] no-underline font-medium text-[15px]">Home</a>
+<header class="bg-[#A8E6A3] h-[70px] flex items-center justify-between px-6 shadow-md relative z-10">
+    <div class="flex items-center space-x-3">
+        <img src="{{ asset('img/logo_farm\'in.png') }}" alt="logo farm'in" class="w-10 h-10">
+        <h2 class="text-[#2E7D32] text-2xl font-bold">Farm'In</h2>
     </div>
-    <form action="{{ url('/logout') }}" method="POST">
-        @csrf
-        <button class="flex-grow-[1] w-[100px] h-[70px] bg-[#A8E6A3] border-none text-[#2E7D32] cursor-pointer font-medium text-[15px] text-center hover:bg-[#54c370] flex items-center justify-center" type="submit" name="btnLogout2">Logout</button>
-    </form>
-</nav>
+
+    <div class="flex items-center space-x-4">
+        <div class="h-full flex items-center justify-center">
+            <a href="{{ url('/user_dashboard') }}" id="btnHistory" class="text-[#2E7D32] text-lg font-medium hover:text-white transition duration-300 no-underline px-4 py-2 rounded-full">Home</a>
+        </div>
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit" class="px-4 py-2 rounded-full bg-[#2E7D32] text-white text-lg font-medium hover:bg-green-800 transition duration-300 border-none cursor-pointer">Logout</button>
+        </form>
+    </div>
+</header>
 <div class="max-w-[1200px] mx-auto p-[20px] box-border">
     <h2 class="text-center mb-[30px] font-semibold">History Pembelian Pupuk</h2>
     @forelse($history as $row)
-    <div class="history-card flex items-center border-[1px] border-[#eee] rounded-[8px] mb-[20px] bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
+    <div class="history-card flex items-center border-[1px] w-[1000px] border-[#eee] rounded-[8px] mb-[20px] bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
         <img src="{{ asset('img/' . $row->gambar) }}" alt="{{ $row->nama_pupuk }}" class="w-[100px] h-[100px] object-cover rounded-[8px] m-[16px]">
         <div class="flex-1">
             <div class="text-[18px] font-semibold">{{ $row->nama_pupuk }}</div>

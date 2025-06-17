@@ -8,29 +8,24 @@ use Illuminate\Support\Facades\Log;
 
 class PupukController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
     public function index()
     {
-        $pupuk = DB::table('pupuk')->get();
+        
+        $pupuk = DB::table('pupuk')->select('id_pupuk', 'nama_pupuk', 'harga', 'gambar', 'deskripsi_pupuk')->get();
         if (session('role') === 'admin') {
             return view('admin.produk', compact('pupuk'));
         }
         return view('menuBeli', compact('pupuk'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    
     public function create()
     {
         return view('pupuk.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    
     public function store(Request $request)
     {
         $request->validate([
@@ -50,9 +45,7 @@ class PupukController extends Controller
         return redirect()->route('pupuk.index')->with('success', 'Pupuk berhasil ditambahkan!');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+    
     public function edit(string $id)
     {
         $pupuk = DB::table('pupuk')->where('id_pupuk', $id)->first();
@@ -62,9 +55,7 @@ class PupukController extends Controller
         return view('pupuk.edit', compact('pupuk'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    
     public function update(Request $request, string $id)
     {
         $request->validate([
@@ -84,9 +75,7 @@ class PupukController extends Controller
         return redirect()->route('pupuk.index')->with('success', 'Pupuk berhasil diperbarui!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+  
     public function destroy(string $id)
     {
         DB::table('pupuk')->where('id_pupuk', $id)->delete();
@@ -95,7 +84,7 @@ class PupukController extends Controller
 
     public function formPembelian(Request $request)
     {
-        // Validasi parameter
+        
         if (!$request->has(['id_pupuk', 'nama_pupuk'])) {
             return redirect()->route('menuBeli');
         }

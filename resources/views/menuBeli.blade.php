@@ -4,17 +4,22 @@
 
 @section('content')
 <script src="https://cdn.tailwindcss.com"></script>
-<nav class="bg-[#A8E6A3] h-[70px] flex flex-wrap shadow-[0px_4px_7px_rgba(0,0,0,0.1)] items-center">
-    <img src="{{ asset('img/logo_farm\'in.png') }}" alt="logo farm'in" class="w-[40px] h-[40px] mt-[5px]">
-    <div class="flex-grow-[3] text-[#2E7D32] m-[10px] p-[5px] font-semibold"><h2>Farm'In</h2></div>
-    <div class="flex-grow-[0] text-center w-[100px] h-[70px] bg-[#A8E6A3] text-[#2E7D32] cursor-pointer hover:bg-[#54c370] flex items-center justify-center">
-        <a href="{{ url('/user_dashboard') }}" id="btnHistory" class="text-[#2E7D32] no-underline font-medium text-[15px]">Home</a>
+<header class="bg-[#A8E6A3] h-[70px] flex items-center justify-between px-6 shadow-md relative z-10">
+    <div class="flex items-center space-x-3">
+        <img src="{{ asset('img/logo_farm\'in.png') }}" alt="logo farm'in" class="w-10 h-10">
+        <h2 class="text-[#2E7D32] text-2xl font-bold">Farm'In</h2>
     </div>
-    <form action="{{ url('/logout') }}" method="POST">
-        @csrf
-        <button class="flex-grow-[1] w-[100px] h-[70px] bg-[#A8E6A3] border-none text-[#2E7D32] cursor-pointer font-medium text-[15px] text-center hover:bg-[#54c370] flex items-center justify-center" type="submit" name="btnLogout2">Logout</button>
-    </form>
-</nav>
+
+    <div class="flex items-center space-x-4">
+        <div class="h-full flex items-center justify-center">
+            <a href="{{ url('/user_dashboard') }}" id="btnHistory" class="text-[#2E7D32] text-lg font-medium hover:text-white transition duration-300 no-underline px-4 py-2 rounded-full">Home</a>
+        </div>
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit" class="px-4 py-2 rounded-full bg-[#2E7D32] text-white text-lg font-medium hover:bg-green-800 transition duration-300 border-none cursor-pointer">Logout</button>
+        </form>
+    </div>
+</header>
 @if($pupuk->count() > 0)
     <h3 class="text-center mb-[50px] mt-[50px] font-semibold text-2xl">PUPUK</h3>
     <div class="flex flex-row flex-wrap items-center justify-around gap-[30px] p-[30px] max-w-[1200px] mx-auto">

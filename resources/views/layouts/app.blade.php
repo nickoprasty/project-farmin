@@ -7,6 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    @yield('content')
+    <div class="flex flex-col min-h-screen">
+        @yield('content')
+    </div>
 </body>
 </html>

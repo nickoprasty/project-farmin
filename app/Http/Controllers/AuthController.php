@@ -17,9 +17,9 @@ class AuthController extends Controller
         $user = DB::table('user')->where('username', $request->username)->first();
         
         if ($user) {
-            // URUTAN DIBALIK: Cek SHA256 dulu (untuk password lama)
+            
             if ($user->password === hash('sha256', $request->password)) {
-                // Auto-convert ke Bcrypt
+                
                 DB::table('user')->where('id_user', $user->id_user)
                     ->update(['password' => Hash::make($request->password)]);
                 
@@ -35,7 +35,7 @@ class AuthController extends Controller
                     return redirect('/user_dashboard');
                 }
             }
-            // Cek Bcrypt (untuk password yang sudah diupgrade)
+          
             elseif (Hash::check($request->password, $user->password)) {
                 Session::put('username', $user->username);
                 Session::put('id_user', $user->id_user);
